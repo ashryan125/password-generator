@@ -29,7 +29,7 @@ THEN the password is either displayed in an alert or written to the page
 ```
 
 ## Screenshot of Deployed Application
-![]()
+![screenshot of demo](./Develop/assets/imgs/passwordGeneratorScreen.png)
 
 
 
