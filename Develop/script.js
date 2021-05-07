@@ -1,25 +1,27 @@
 // Assignment code here
 
+//generate random password
 
-//set of letters include lower case, upper case, numbers, special characters
-//generate lowercase letter
-function getLowerLetter() {
-  return String.fromCharCode(Math.floor(Math.random() * 26) + 97);
-};
-//generate uppercase letter
-function getUpperLetter() {
-  return String.fromCharCode(Math.floor(Math.random() *26) + 65);
-};
-//generate number letter
-function getNumber() {
-  return String.fromCharCode(Math.floor(Math.random() *10) + 48);
-};
-//generate symbol letter
-function getSymbol() {
-  var symbols = '!@#$%^&*(){}[]=<>,./';
-  return symbols[Math.floor(Math.random()* symbols.length)];
-};
+function generate() {
 
+  //set password length/complexity
+
+  var passwordLength = document.getElementById("range").value;
+
+  //password value options
+  var values = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!@#$%^&*()[]{}<>,.?/";
+
+  var password = "";
+
+  //create for loop to choose password characters
+  for (var i = 0; i <= passwordLength; i++) {
+    password = password + values.charAt(Math.floor(Math.random() * Math.floor(values.length - 1)));
+  }
+
+  //add password to display
+  document.getElementById("card-body").value = password;
+
+};
 
 
 
